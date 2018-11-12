@@ -22,6 +22,15 @@ print(c)
 print(type('520'))
 print(type(True))
 print(type(3e4))
+#建议用isinstanc
+print(isinstance(520,int))
+print(isinstance('520',str))
+print(isinstance(520.0,float))
+print(isinstance(520.0,bool))
+
+
+
+
 
 
 
