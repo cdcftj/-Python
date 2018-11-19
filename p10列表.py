@@ -113,6 +113,36 @@ print(list6)
 print(list7)
 print(list8)#等号过来跟list6一样变
 
+#元组是不可改变的类型，元组和列表的不同，列表可以任意插入、删除元素
+#元组大部分是用小括号,逗号是创建元组的关键
+tuple1 = (1,2,3,4,5,6,7,8)
+print(tuple1)
+#访问元组
+print(tuple1[1])
+print(tuple1[5:])
+print(tuple1[:5])
+tuple2 = tuple1[:]
+print(tuple2)
+temp = (1)
+print(type(temp))
+temp =(),print('空元组')
+print(type(temp))
+temp = (1,),print('一个元素加逗号')
+print(type(temp))
+temp = 1,
+print(type(temp))
+temp = 8 * (8,)
+print('*号是重复操作符')
+print(temp)
+
+#更新和删除一个元组
+temp =('小甲鱼' ,'黑夜','迷途','小布丁')
+temp = temp[:2] + ('怡静',) + temp[2:]
+print(temp)
+#del temp 是删除元组
+#元组相关的操作符：+号拼接操作符，×重复操作符，大于小于< > 成员操作符in 逻辑and
+
+
 
 
 
