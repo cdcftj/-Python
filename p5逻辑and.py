@@ -6,7 +6,7 @@ print(1.5e11)
 #类型转换int() str() float()
 a = 5.99
 b = int(a)
-print(b) #浮点数不会四舍五入
+print(b)#浮点数不会四舍五入
 a = '520'
 b = float(a)
 print(b)

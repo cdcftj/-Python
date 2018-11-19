@@ -50,12 +50,76 @@ print(member.pop(1))
 print(member)
 member.insert(2,'Tanyuanhong')
 print(member)
-print(member[1:3])
+print(member[1:3])#3减1等于2
 print(member[:3]) #0到3
 print(member[1:])#1到结束
 print((member[:]))#原列表拷贝
 member2 = member[:]#member的拷贝
 print(member2)
+
+#列表的一些常有操作符，比较、逻辑、连接、重复、成员关系操作符
+list1 = [123]
+list2 = [234]
+print(list1 > list2)
+
+list1 = [123,456]
+list2 = [234,123]
+print(list1 >list2)#第0个元素比较假了整个都假
+#逻辑and左右两边都是True结果为True
+list3 =[123,456]
+print((list1 <list2) and (list1 ==list3))
+#连接,不能添加新元素
+list4 = list1 + list2
+print(list4)
+#×重复操作符
+print('#整个列表复制3次')
+print(list3 *3)
+print('#列表复制三次')
+list3 *= 3
+print(list3)
+print('#列表在上面3次后又乘5次就是15次')
+list3 *= 5
+print(list3)
+#成员关系操作符：in,not in
+print(123 in list3)
+print('小甲鱼' not in list3)
+print(123 not in list3)
+list5 = [123, ['小甲鱼', '牡丹'], 456]
+print('小甲鱼' in list5)#结果为Flase只能影响一层，跟Break continue一样
+print('小甲鱼' in list5[1])#引入元素1就是True了
+#访问数组的值
+print(list5[1][1])
+#列表类型的内置函数，列表的小伙伴们
+print(dir(list))
+#count计算参数在列表中出现次数
+print(list3.count(123))
+#list 3起始位置，7结束位置
+print(list3.index(123,3,7))
+#reverse将整个列表原地翻转,没有参数
+list3.reverse()
+print(list3)
+#sort()指定方式对列表成员进行排序，默认是从小到大
+list6 = [4,2,5,1,9,23,32,0]
+list6.sort()
+print(list6)
+#sort(reverse=F)
+list6.sort(reverse=True)
+print(list6)
+#等号，分片拷贝区别。等号只是换名称内容没有变
+list7 = list6[:]
+list8 =list6
+list6.sort()
+print(list6)
+print(list7)
+print(list8)#等号过来跟list6一样变
+
+
+
+
+
+
+
+
 
 
 
