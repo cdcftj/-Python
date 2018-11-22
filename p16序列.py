@@ -8,7 +8,7 @@ print(help(list))
 a = list()
 print(a)
 b = 'I love FishC.com'
-b = list(b)
+b = list(b)#字符串迭代
 print(b)
 #元祖变成列表
 c = (1,1,2,3,5,8,13,21,34)
@@ -51,17 +51,19 @@ print(list(enumerate(number)))#插入索引值
 a = [1,2,3,4,5,6,7,8]
 b = [4,5,6,7,8]
 print(list(zip(a,b)))#打包成元组，多余的省去
-##p017 函数：python的乐高积木
+## p017 函数：python的乐高积木
 # 函数、对象、模块
 def MyFirstFunction():
-    print('这是我创建的第一个函数')
+    print('这是我创建的第一个函数!')
+    print('我表示很激动')
+    print('在此我要感谢大家.......')
 # 调用函数
 MyFirstFunction()
 # 函数带参数
 def MySecondFunction(name):
     print(name + '我爱你！')
 MySecondFunction('Huqing')
-MySecondFunction('小甲鱼')#参数可变了
+MySecondFunction('小甲鱼')#参数就可变了
 
 def add(num1,num2):
     result = num1 +num2
