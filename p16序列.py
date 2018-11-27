@@ -74,3 +74,40 @@ print('# 函数的返回值 return')
 def add(num1,num2):
     return (num1 + num2)
 print(add(5,6))
+
+## p19 函数灵活就强大
+# parameter 形式参数小括号里面的内容
+# argument 实际参数是函数调用过程中的'小甲鱼'
+# 函数文档
+def MyFirstFunction(name):
+    '函数定义过程中的name是形参'
+print(MyFirstFunction.__doc__)
+help(MyFirstFunction)
+#help访问函数也可以看见文档
+print.__doc__
+help(print)
+# 关键字参数
+def SaySome(name , words):
+    print(name + '->' + words)
+print(SaySome('小甲鱼' ,'让编程改变世界！'))
+#关键字就是给名字下定义
+print(SaySome(words = '让编程改变世界！', name='小甲鱼'))
+
+# 默认参数，定义了默认值的参数
+def SaySome(name='小甲鱼',words= '让编程改变世界！'):
+    print(name + '->' + words)
+print(SaySome())
+print(SaySome('太阳花'))
+print(SaySome('太阳花','朝向太阳开放'))
+
+#收集参数
+def test(*params):
+    print('参数的长度是:',len(params))
+    print('第二个参数是:',params[1])
+print(test(1,'小甲鱼',3.14,5,6,7,8))
+#收集参数后边加定制参数，就要用关键字参数来定制
+def test(*params,exp=8): # exp设成默认参数就不会出错
+    print('参数的长度是:',len(params),exp)
+    print('第二个参数是:',params[1])
+print(test(1,'小甲鱼',3.14,5,6,7,exp= 8))
+
