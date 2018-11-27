@@ -46,7 +46,7 @@ print(reversed(number))
 print(list(reversed(number)))
 # 枚举
 print(enumerate(number))
-print(list(enumerate(number)))#插入索引值
+print(list(enumerate(number)))#插入索引值,元组
 # zip打包
 a = [1,2,3,4,5,6,7,8]
 b = [4,5,6,7,8]
@@ -72,5 +72,5 @@ print(add(1,2))
 
 print('# 函数的返回值 return')
 def add(num1,num2):
-    return  (num1 +num2)
+    return  (num1 + num2)
 print(add(5,6))
