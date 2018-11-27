@@ -72,5 +72,5 @@ print(add(1,2))
 
 print('# 函数的返回值 return')
 def add(num1,num2):
-    return  (num1 + num2)
+    return (num1 + num2)
 print(add(5,6))
