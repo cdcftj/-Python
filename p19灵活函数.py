@@ -1,10 +1,11 @@
 #  离散数学题，在1-1000000中有多少个数字包括0或者1
-a = 0
+#a = 0
 c: int = 0
 for i in range(1,1000000):
 #while a < 1000000:
-    a += 1
-    b = str(a)
+#    a += 1
+#    b = str(a)
+    b = str(i)
 #    list(b)
 #    print(list(b))
 #    print('0' in b or '1' in b)
