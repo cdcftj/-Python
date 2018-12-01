@@ -50,3 +50,19 @@ print('打折后价格是：',new_price)
 print('修改后old_price的值是2：',old_price)
 #print('这里试图打印局部变量final_price的值',final_price)
 #final_price 只在discounts函数内生效
+
+# p020 内歉函数和闭包
+# Global关键字
+count = 5
+def MyFun():
+    count = 10
+    print(10)
+(MyFun())
+print(count) # 仍然会打印全局变量5，Python用了屏蔽机制
+count = 5
+def MyFun():
+    global count #改成全局变量
+    count = 10
+    print(10)
+MyFun()
+print(count)
