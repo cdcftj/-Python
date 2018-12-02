@@ -96,7 +96,7 @@ def fun1():
     x = 5
     def fun2():
         nonlocal x
-# x 不是一个局部变量=
+# x 不是一个局部变量
         x *= x
         return x
     return fun2()
