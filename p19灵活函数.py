@@ -66,3 +66,38 @@ def MyFun():
     print(10)
 MyFun()
 print(count)
+# 内嵌函数：在函数内部创建函数
+def fun1():
+    print('fun1()正在被调用')
+    def fun2():
+        print('fun2()正在被调用')
+    fun2()
+fun1()
+# 整个内部函数作用域都在外部函数之内
+# 闭包 clasure 函数式编程的重要方式
+def funx(x):
+    def funy(y):
+        return x * y
+    return funy
+i = funx(8)
+print(i)
+type(i)
+print(i(5))
+print(funx(8)(5))
+
+def fun1():
+    x = [5]
+    def fun2():
+        x[0] *= x[0]
+        return x[0]
+    return fun2()
+print(fun1()) #变列表就可以解决
+def fun1():
+    x = 5
+    def fun2():
+        nonlocal x
+# x 不是一个局部变量=
+        x *= x
+        return x
+    return fun2()
+print(fun1())
