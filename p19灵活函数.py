@@ -53,6 +53,7 @@ print('修改后old_price的值是2：',old_price)
 
 # p020 内歉函数和闭包
 # Global关键字
+# 屏蔽 Shadowing
 count = 5
 def MyFun():
     count = 10
