@@ -34,6 +34,27 @@ print(list(filter(lambda x: x % 2,range(10))))
 # map()不是地图是映射来解释
 print(list(map(lambda x : x * 2,range(10))))
 
-
-
-
+#  递归是神马？树结构的定义
+def recursion():
+    return recursion()
+# ctr+c 断了，设置递归深度
+import sys
+sys.setrecursionlimit(10000)
+# 写一个递归求阶乘 1 *2*3*4*5
+def factorial(n):
+    result  = n
+    for i in range(1,n):
+        result *= i
+    return result
+number = int(input('请输入一个正整数'))
+result = factorial(number)
+print("%d 的阶乘是：%d" %(number,result))
+# 递归实现,1、调用函数自身，2、设置自身正确的返回值
+def factorial(n):
+    if n == 1:
+        return 1
+    else:
+        return n * factorial(n-1)
+number = int(input('请输入一个正整数'))
+result = factorial(number)
+print("%d 的阶乘是：%d" %(number,result))
