@@ -60,6 +60,7 @@ result = factorial(number)
 print("%d 的阶乘是：%d" %(number,result))
 
 # 兔子问题：斐波那契数列 递归 和 迭代实现
+# 迭代实现
 def fab(n):
     n1 = 1
     n2 = 1
