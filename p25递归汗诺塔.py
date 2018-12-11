@@ -33,5 +33,77 @@ print(dict4)
 # 增加项
 dict4['成都天气'] = '现在2018年12月10日四度非常冷'
 print(dict4)
+# 字典不好用二 工厂函数
+dict1 = {}
+print(dict1.fromkeys((1, 2, 3)))
+#结果是空的None,现在设置Number
+print(dict1.fromkeys((1, 2, 3), 'Number'))
+# 访问字典的几个方法：keys() values() items()
+dict1 = dict1.fromkeys(range(32), '赞')
+# 打印序号
+for eachkey in dict1.keys():
+    print(eachkey)
+# 打印赞
+for eachValue in dict1.values():
+    print(eachValue)
+# 打印整个项,元组形式
+for eachItem in dict1.items():
+    print(eachItem)
+# get方法解决报错
+print(dict1.get(32, '木有！'))
+# 成员资格操作符 in ,not in
+print(31 in dict1)
+print(32 in dict1)
+# 清空一个字典用clear()方法
+dict1.clear()
+print(dict1)
+# a = {} 方式清空有危险
+a = {'姓名': '小甲鱼'}
+b = a
+a = {}
+a = b
+print(a)
+print(b)
+a.clear()
+print(a)
+print(b)
+# 全拷贝copy方法
+a = {1: 'one', 2: 'two'}
+b = a.copy()
+c = a
+print(c)
+print(a)
+print(b)
+# 赋值地址一样，全拷贝地址不一样
+print(id(a))
+print(id(b))
+print(id(c))
+c[4] = 'three'
+print(c)
+print(a)
+print(b)# 全拷贝b没有改变
+# pop()给定键弹出给定的值
+# popitem()弹出一个项
+print(a.pop(2))
+print(a.popitem())# 随机弹
+# setdefault 跟get类似，找不到自己添加
+a.setdefault('小白')
+print(a)
+a.setdefault(5, 'five')
+print(a)
+# update 用字典映射关系去更新一个字典
+b = {'小白': '一只狗'}
+a.update(b)
+print(a)
+
+
+
+
+
+
+
+
+
+
 
 
