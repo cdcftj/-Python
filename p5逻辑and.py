@@ -16,6 +16,7 @@ print(b)
 a = 5.99
 b = str(a)
 print(b)
+
 c = str(5e19)
 print(c)
 #type()函数

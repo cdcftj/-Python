@@ -7,10 +7,22 @@ print(secret)
 import  os
 print(os.getcwd())
 
-os.mkdir('c:\\a')
+os.mkdir('a')
 # remove rename system
 # os.path 模块
-os.path.basename('E:\A')
+os.path.basename('A')
+os.listdir('//')
+os.makedirs('b/c')  # 创建双层目录
+# 删除空目录
+os.rmdir('b/c')
+os.rmdir('b')
+os.rmdir('a')
+# os.remove() 删除文件
+# os.system('gdebi')
+os.listdir(os.curdir)  # 显示当前目录
+os.name
+# os.path 模块
+os.path.basename('b/c/sexcy.avi')
 
 
 
