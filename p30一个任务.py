@@ -11,8 +11,9 @@ def save_file(boy, girl, count):
 
     boy_file.close()
     girl_file.close()
-
+#分割文件
 def split_file(file_name):
+
     f = open('record.txt')
 
     boy = []
